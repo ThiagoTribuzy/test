@@ -22,7 +22,7 @@
     </style>
 </head>
 
-<body class="d-flex justify-content-center align-items-center" style="background-image: url(https://images.tcdn.com.br/img/img_prod/1102995/papel_de_parede_coracao_rosa_125_1_332507e890fc14127e090083dc777e90.jpg);">
+<body class="d-flex justify-content-center align-items-center" style="overflow:hidden; background-image: url(https://images.tcdn.com.br/img/img_prod/1102995/papel_de_parede_coracao_rosa_125_1_332507e890fc14127e090083dc777e90.jpg);">
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -30,7 +30,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Thiagmar</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="font-size: 13px;">
                     <p>Fiquei sabendo q, me corrija se eu estiver errado.<br>A ponte deu certo!<br><br></p>
                     <div id="parcelas">
                         <div></div>
@@ -47,37 +47,38 @@
         </div>
     </div>
     <div>
-        <p style="font-size: 40px!important;" class="text-center fw-semibold">Vai casar comigo? 😳<br></p><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" style="width:64.59px; margin-left: 68.3925px">SIM!</button>
+        <p class="text-center fw-semibold">Vai casar comigo? 😳<br></p><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" style="width:50.13px;font-size:10px">SIM!</button>
     </div>
-    <button class="btn btn-primary" id="bouncing" style="position: absolute; top: 329px; left: 684px;  z-index: 55;" type="button">NÃO!</button>
+    <button class="btn btn-primary" id="bouncing" style="font-size:10px;position: absolute; top: 446px; left: 205px;  z-index: 55;" type="button">NÃO!</button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-utils.js"></script>
 </body>
 <script>
-    /*moment.tz.add("America/Manaus|LMT -04 -03|40.4 40 30|01212121212121212121212121212121|-2glvX.U HdKX.U 1cc0 1e10 1bX0 Ezd0 So0 1vA0 Mn0 1BB0 ML0 1BB0 zX0 qe10 xb0 2ep0 nz0 1C10 zX0 1C10 LX0 1C10 Mn0 H210 Rb0 1tB0 IL0 1Fd0 FX0 dPB0 On0|19e5");
-                                                                                                                                                                                                                                                                                                                                                                                                            var d1 = moment(new Date(moment('2021/10/13').format())).format()
-                                                                                                                                                                                                                                                                                                                                                                                                            var d2 = moment(Date.now()).format()
-                                                                                                                                                                                                                                                                                                                                                                                                            console.log(moment(Date.now()).format())
-                                                                                                                                                                                                                                                                                                                                                                                                            console.log(d1 + "\n\n\n" + d2)
-                                                                                                                                                                                                                                                                                                                                                                                                            const diffInMs = new Date(d2) - new Date(d1)
-                                                                                                                                                                                                                                                                                                                                                                                                            const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+    //moment.tz.add("America/Manaus|LMT -04 -03|40.4 40 30|01212121212121212121212121212121|-2glvX.U HdKX.U 1cc0 1e10 1bX0 Ezd0 So0 1vA0 Mn0 1BB0 ML0 1BB0 zX0 qe10 xb0 2ep0 nz0 1C10 zX0 1C10 LX0 1C10 Mn0 H210 Rb0 1tB0 IL0 1Fd0 FX0 dPB0 On0|19e5");
+    //var d1 = moment(new Date(moment('2021/10/13').format())).format()
+    //var d2 = moment(Date.now()).format()
+    //console.log(moment(Date.now()).format())
+    //console.log(d1 + "\n\n\n" + d2)
+    //const diffInMs = new Date(d2) - new Date(d1)
+    //const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
 
-                                                                                                                                                                                                                                                                                                                                                                                                            $('#calc').text("Se amando à " + Math.round(diffInDays) + " dias!")*/
+    //$('#calc').text("Se amando à " + Math.round(diffInDays) + " dias!")
+
 
     var button = document.getElementById("bouncing");
 
     button.addEventListener("click", function() {
         var changeTop = 1200;
-        var changeLeft = 500;
+        var changeLeft = 100;
         do {
-            changeTop = (Math.random() * ($(window).height() - $("#bouncing").height() - 700));
-        } while (changeTop > 2174)
+            changeTop = (Math.random() * ($(window).height() - $("#bouncing").height() - 600));
+        } while (changeTop > 1200)
         do {
-            changeLeft = (Math.random() * ($(window).width() - $("#bouncing").width() - 600));
+            changeLeft = (Math.random() * ($(window).width() - $("#bouncing").width() - 40));
         }
-        while (changeLeft > 500)
+        while (changeLeft > 50)
         console.log(changeLeft + "\n\n" + changeTop)
         $("#bouncing").css("margin-top", changeTop + "px");
         $("#bouncing").css("margin-left", changeLeft + "px");
